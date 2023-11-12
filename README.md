@@ -100,7 +100,7 @@ Here is an example of how to use the Path class to work with a file path:
 `#Include Path.ahk ; Include the Path class script
 
 ; Initialize a Path object with a file path
-myPath := new Path("C:\Users\Username\Documents\example.txt")
+myPath := Path("C:\Users\Username\Documents\example.txt")
 
 ; Get the parent directory
 parentDir := myPath.parent()
