@@ -48,6 +48,7 @@ class Path
         {
             return true
         }
+        else
         {
             return false
         }
