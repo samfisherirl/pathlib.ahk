@@ -15,7 +15,7 @@ To use the Path class, you need to initialize it with a file path when creating 
 
 ahkCopy code
 
-`myPath := new Path("C:\Users\Username\Documents\example.txt")`
+`myPath :=  Path("C:\Users\Username\Documents\example.txt")`
 
 ### Methods
 
