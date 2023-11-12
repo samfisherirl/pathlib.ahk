@@ -95,7 +95,7 @@ Example
 
 Here is an example of how to use the Path class to work with a file path:
 
-ahkCopy code
+```ahk
 
 `#Include Path.ahk ; Include the Path class script
 
@@ -133,7 +133,5 @@ fileContents := myPath.read()
 ; Write to the file
 myPath.write("This is the content to be written to the file.")`
  
+```
 
-* * * * *
-
-Please replace `[Your Name]`, `[Date]`, and `[License]` with the appropriate information for your script. This documentation provides a comprehensive guide on how to use the Path class and its methods in your AutoHotkey script.
