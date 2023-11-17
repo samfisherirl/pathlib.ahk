@@ -2,9 +2,9 @@ global __file__ := A_ScriptFullPath
 
 class Path
 {
-    __New(pathFile)
+    __New(pathStr)
     {
-        this.path := pathFile
+        this.path := pathStr
         this.cwd := A_WorkingDir
     }
     exists() => FileExist(this.path)
