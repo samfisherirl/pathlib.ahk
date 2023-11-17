@@ -1,4 +1,4 @@
-﻿global __file__ := A_ScriptFullPath
+global __file__ := A_ScriptFullPath
 
 class Path
 {
@@ -7,6 +7,9 @@ class Path
         this.path := pathFile
         this.cwd := A_WorkingDir
     }
+    exists() => FileExist(this.path)
+    read() => FileOpen(this.path, "r").Read()
+    write(str) => FileOpen(this.path, "w").Write(str)
     parent()
     {
         SplitPath(this.path, , &parentPath)
@@ -42,17 +45,6 @@ class Path
         SplitPath(this.path, , , &ext)
         return ext
     }
-    exists()
-    {
-        if FileExist(this.path) or DirExist(this.path)
-        {
-            return true
-        }
-        else
-        {
-            return false
-        }
-    }
     empty()
     {
         if FileExist(this.path)
@@ -75,13 +67,5 @@ class Path
             DirMove(this.path, temp, 1)
             DirDelete(temp)
         }
-    }
-    read()
-    {
-        return FileOpen(this.path, "r").Read()
-    }
-    write(str)
-    {
-        return FileOpen(this.path, "w").Write(str)
     }
 }
